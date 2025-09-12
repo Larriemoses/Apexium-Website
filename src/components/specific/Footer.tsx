@@ -26,101 +26,91 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
-        <div className="flex flex-col items-center md:items-start">
-          <h3 className="font-semibold text-lg mb-4 text-center md:text-left">
-            Quick Links
-          </h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            {[
-              { to: "/", label: "Home" },
-              { to: "/about", label: "About" },
-              { to: "/services", label: "Services" },
-              { to: "/contact", label: "Contact" },
-            ].map((link, idx) => (
-              <li key={idx}>
-                <Link
-                  to={link.to}
-                  className="hover:text-white hover:pl-2 transition-all duration-300 block"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Quick Links + Our Services (Desktop only) */}
+        <div className="hidden md:flex justify-center md:justify-start gap-12 col-span-2">
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About" },
+                { to: "/services", label: "Services" },
+                { to: "/contact", label: "Contact" },
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={link.to}
+                    className="hover:text-white hover:pl-2 transition-all duration-300 block"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Our Services */}
-        <div className="flex flex-col items-center md:items-start">
-          <h3 className="font-semibold text-lg mb-4 text-center md:text-left">
-            Our Services
-          </h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            {[
-              "Business & Company Registration",
-              "Legal Drafting",
-              "Business Documentation",
-              "Advisory & Compliance",
-              "Dispute Resolution",
-            ].map((service, idx) => (
-              <li key={idx}>
-                <span className="hover:text-white hover:pl-2 transition-all duration-300 block cursor-pointer">
-                  {service}
-                </span>
-              </li>
-            ))}
-          </ul>
+          {/* Our Services */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Our Services</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              {[
+                "Business & Company Registration",
+                "Legal Drafting",
+                "Business Documentation",
+                "Advisory & Compliance",
+                "Dispute Resolution",
+              ].map((service, idx) => (
+                <li key={idx}>
+                  <span className="hover:text-white hover:pl-2 transition-all duration-300 block cursor-pointer">
+                    {service}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-
         {/* Contact */}
-        <div className="flex flex-col items-center md:items-start">
-          <h3 className="font-semibold text-lg mb-4 text-center md:text-left">
-            Contact
-          </h3>
-          <ul className="space-y-4 text-sm text-gray-300">
-            <li className="flex flex-col items-center md:items-start">
-              <span className="flex items-center mb-1">
-                <FaMapMarkerAlt className="mr-2 text-teal-400" />
-                <span className="font-medium">Address</span>
-              </span>
-              <p>No 3 Mount Ararat Street, Ijoka Road, Akure</p>
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <h3 className="font-semibold text-lg mb-6">Contact</h3>
+          <ul className="space-y-6 text-sm text-gray-300 w-full">
+            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+              <FaMapMarkerAlt className="text-teal-400 text-base md:text-lg flex-shrink-0" />
+              <span>No 3 Mount Ararat Street, Ijoka Road, Akure</span>
             </li>
-            <li className="flex flex-col items-center md:items-start">
-              <span className="flex items-center mb-1">
-                <FaPhone className="mr-2 text-teal-400" />
-                <span className="font-medium">Phone</span>
-              </span>
+
+            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+              <FaPhone className="text-teal-400 text-base md:text-lg flex-shrink-0" />
               <a
                 href="tel:+2347032270131"
-                className="hover:text-white transition-colors"
+                className="hover:text-white transition-colors relative group"
               >
                 07032270131 / 08139618575
+                <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
-            <li className="flex flex-col items-center md:items-start">
-              <span className="flex items-center mb-1">
-                <FaEnvelope className="mr-2 text-teal-400" />
-                <span className="font-medium">Email</span>
-              </span>
+
+            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+              <FaEnvelope className="text-teal-400 text-base md:text-lg flex-shrink-0" />
               <a
                 href="mailto:apexiumconsultservice@gmail.com"
-                className="hover:text-white transition-colors"
+                className="hover:text-white transition-colors relative group"
               >
                 apexiumconsultservice@gmail.com
+                <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
-            <li className="flex flex-col items-center md:items-start">
-              <span className="flex items-center mb-1">
-                <FaLinkedin className="mr-2 text-teal-400" />
-                <span className="font-medium">LinkedIn</span>
-              </span>
+
+            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+              <FaLinkedin className="text-teal-400 text-base md:text-lg flex-shrink-0" />
               <a
                 href="https://www.linkedin.com/in/samuel-omomowo-2a5bb1126/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-white transition-colors relative group"
               >
-                Samuel Omomowo
+                LinkedIn
+                <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           </ul>
@@ -128,7 +118,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="text-center text-xs text-gray-400 mt-12 border-t border-gray-600 pt-4">
+      <div className="text-center text-xs text-gray-400 mt-10 border-t border-gray-600 pt-4">
         © {new Date().getFullYear()} Apexium Consult & Services Ltd. All rights
         reserved.
       </div>

@@ -49,41 +49,46 @@ const servicesPreview = [
 
 const ServicesGrid = () => {
   return (
-    <section className="py-16 bg-white w-11/12 max-w-7xl mx-auto">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-semibold text-[#0B2A44] mb-3">
+    <section className="py-20 bg-gray-50 w-11/12 max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="text-center mb-14">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A44] mb-4">
           Our Services
         </h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           We provide seamless solutions to individuals, entrepreneurs, and
           organizations seeking to establish and grow their businesses in
           Nigeria.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesPreview.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 p-6 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-[#0B2A44]/10 text-[#0B2A44] rounded-full mx-auto mb-4">
-                <service.icon size={32} />
-              </div>
-              <h3 className="text-xl font-medium text-[#0B2A44] mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {service.description}
-              </p>
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicesPreview.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#0B2A44]/10 to-[#0B2A44]/20 text-[#0B2A44] rounded-full mx-auto mb-6 shadow-sm">
+              <service.icon size={30} />
             </div>
-          ))}
-        </div>
-        <div className="mt-12">
-          <Link to="/services">
-            <button className="bg-[#0B2A44] hover:bg-[#0B2A44]/90 transition-colors duration-300 text-white font-medium py-3 px-8 rounded-full">
-              Learn More About All Services
-            </button>
-          </Link>
-        </div>
+            <h3 className="text-xl font-semibold text-[#0B2A44] mb-3 text-center">
+              {service.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed text-center">
+              {service.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Button */}
+      <div className="mt-14 text-center">
+        <Link to="/services">
+          <button className="bg-[#0B2A44] hover:bg-[#0B2A44]/90 transition-colors duration-300 text-white font-semibold py-3 px-10 rounded-full shadow-md hover:shadow-xl">
+            Learn More About All Services
+          </button>
+        </Link>
       </div>
     </section>
   );
