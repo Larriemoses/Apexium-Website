@@ -10,7 +10,7 @@ import {
 import { Plus, Minus } from "lucide-react";
 import { motion } from "framer-motion";
 
-const NAVY = "#0B2A44";
+// const NAVY = "#0B2A44";
 
 const fullServicesList = [
   {

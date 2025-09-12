@@ -10,7 +10,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-const NAVY = "#0B2A44";
+// const NAVY = "#0B2A44";
 
 const coreValues = [
   {

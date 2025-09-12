@@ -14,7 +14,7 @@ import {
 import ChatWidget from "../components/common/ChatWidget";
 import Hero from "../components/specific/Hero";
 
-const NAVY = "#0B2A44";
+// const NAVY = "#0B2A44";
 
 // Safe, typed variants (NO function-valued variants — avoids TS errors)
 const fadeUp: Variants = {
