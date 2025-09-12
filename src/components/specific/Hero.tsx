@@ -15,7 +15,7 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-4xl mx-auto"
+        className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-6xl mx-auto"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -26,7 +26,7 @@ const Hero = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+        <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-4xl mb-8">
           We are a professional business support and consultancy firm
           specializing in corporate and legal documentation.
         </p>

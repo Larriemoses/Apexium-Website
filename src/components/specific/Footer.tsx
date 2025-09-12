@@ -74,13 +74,13 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <h3 className="font-semibold text-lg mb-6">Contact</h3>
           <ul className="space-y-6 text-sm text-gray-300 w-full">
-            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-              <FaMapMarkerAlt className="text-teal-400 text-base md:text-lg flex-shrink-0" />
+            <li className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-4">
+              <FaMapMarkerAlt className="text-teal-400 text-lg flex-shrink-0" />
               <span>No 3 Mount Ararat Street, Ijoka Road, Akure</span>
             </li>
 
-            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-              <FaPhone className="text-teal-400 text-base md:text-lg flex-shrink-0" />
+            <li className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-4">
+              <FaPhone className="text-teal-400 text-lg flex-shrink-0" />
               <a
                 href="tel:+2347032270131"
                 className="hover:text-white transition-colors relative group"
@@ -90,8 +90,8 @@ const Footer = () => {
               </a>
             </li>
 
-            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-              <FaEnvelope className="text-teal-400 text-base md:text-lg flex-shrink-0" />
+            <li className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-4">
+              <FaEnvelope className="text-teal-400 text-lg flex-shrink-0" />
               <a
                 href="mailto:apexiumconsultservice@gmail.com"
                 className="hover:text-white transition-colors relative group"
@@ -101,8 +101,8 @@ const Footer = () => {
               </a>
             </li>
 
-            <li className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-              <FaLinkedin className="text-teal-400 text-base md:text-lg flex-shrink-0" />
+            <li className="flex flex-col items-center md:flex-row md:items-center gap-2 md:gap-4">
+              <FaLinkedin className="text-teal-400 text-lg flex-shrink-0" />
               <a
                 href="https://www.linkedin.com/in/samuel-omomowo-2a5bb1126/"
                 target="_blank"
