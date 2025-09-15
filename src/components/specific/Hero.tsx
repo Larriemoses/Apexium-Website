@@ -22,7 +22,7 @@ const Hero = () => {
       >
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold uppercase tracking-wide mb-4">
-          Apexium Consult & Service
+          Apexium Consult & Services
         </h1>
 
         {/* Description */}

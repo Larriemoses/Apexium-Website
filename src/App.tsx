@@ -12,7 +12,7 @@ const App = () => {
         path="/"
         element={
           <Layout
-            title="Apexium Consult & Service - Your Partner in Business & Legal Excellence"
+            title="Apexium Consult & Services - Your Partner in Business & Legal Excellence"
             description="We provide seamless corporate and legal solutions, guiding you through every stage of establishing and growing your business in Nigeria."
             keywords="Business registration Nigeria, CAC services, legal documentation, business consultancy, compliance support"
           >

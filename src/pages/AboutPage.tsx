@@ -10,8 +10,6 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-// const NAVY = "#0B2A44";
-
 const coreValues = [
   {
     icon: FaUserShield,
@@ -37,7 +35,6 @@ const coreValues = [
   },
 ];
 
-// Type-safe variants: no function-valued variants, no `ease` arrays/strings in variants
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12, delayChildren: 0 } },
@@ -51,7 +48,7 @@ const itemVariants = {
 const AboutPage: React.FC = () => {
   return (
     <div className="w-full text-gray-800">
-      {/* HERO (kept visually similar to your original) */}
+      {/* HERO */}
       <motion.section
         className="relative w-full flex items-center justify-center bg-cover bg-center"
         style={{
@@ -178,7 +175,7 @@ const AboutPage: React.FC = () => {
           </div>
         </motion.section>
 
-        {/* MANAGING PARTNER + CONTACTS */}
+        {/* MANAGING PARTNER */}
         <motion.section
           className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row gap-6"
           initial="hidden"
@@ -186,6 +183,7 @@ const AboutPage: React.FC = () => {
           viewport={{ once: false, amount: 0.2 }}
           variants={containerVariants}
         >
+          {/* Image */}
           <motion.div
             className="flex-shrink-0 flex justify-center md:justify-start"
             variants={itemVariants}
@@ -199,6 +197,7 @@ const AboutPage: React.FC = () => {
             />
           </motion.div>
 
+          {/* Text + Contact */}
           <motion.div
             className="flex-1 flex flex-col justify-between"
             variants={itemVariants}
@@ -228,6 +227,7 @@ const AboutPage: React.FC = () => {
                 diverse sectors.
               </motion.p>
 
+              {/* Expertise List */}
               <motion.div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 text-sm"
                 variants={itemVariants}
@@ -249,32 +249,37 @@ const AboutPage: React.FC = () => {
 
             {/* Contact Info */}
             <motion.div
-              className="mt-6 border-t pt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm md:text-base"
+              className="mt-6 border-t pt-6 grid grid-cols-1 
+             md:grid-cols-[1fr_0.8fr_1.2fr] gap-y-8 md:gap-y-0 md:gap-x-12 
+             text-sm md:text-base"
               variants={itemVariants}
             >
+              {/* Phone */}
               <div>
                 <div className="flex items-center gap-2 text-[rgb(11,42,68)] font-semibold">
                   <FaPhoneAlt /> Phone
                 </div>
-                <div className="text-gray-700 mt-1">
-                  07032270131 / 08139618575
+                <div className="text-gray-700 mt-2 flex flex-col">
+                  <span>07032270131 | 08139618575</span>
                 </div>
               </div>
 
-              <div>
+              {/* Email */}
+              <div className="pr-6">
                 <div className="flex items-center gap-2 text-[rgb(11,42,68)] font-semibold">
                   <FaEnvelope /> Email
                 </div>
-                <div className="text-gray-700 mt-1">
+                <div className="text-gray-700 mt-2">
                   apexiumconsultservice@gmail.com
                 </div>
               </div>
 
+              {/* Address */}
               <div>
                 <div className="flex items-center gap-2 text-[rgb(11,42,68)] font-semibold">
                   <FaMapMarkerAlt /> Address
                 </div>
-                <div className="text-gray-700 mt-1">
+                <div className="text-gray-700 mt-2 leading-relaxed">
                   No 3 Mount Ararat Street, Ijoka Road, Akure
                 </div>
               </div>
