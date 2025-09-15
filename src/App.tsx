@@ -3,7 +3,9 @@ import Layout from "./components/layouts/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
+import OurTeam from "./pages/OurTeam";
 import ContactPage from "./pages/ContactPage";
+import ProfilePreview from "./pages/ProfilePreview"; // ✅ Import this
 
 const App = () => {
   return (
@@ -44,6 +46,33 @@ const App = () => {
           </Layout>
         }
       />
+      <Route
+        path="/our-team"
+        element={
+          <Layout
+            title="Our Team - Apexium Consult & Services"
+            description="Meet the experienced team at Apexium Consult & Services, delivering professional business and legal solutions in Nigeria."
+            keywords="Apexium team, legal consultants, business consultants, corporate lawyers, Nigeria"
+          >
+            <OurTeam />
+          </Layout>
+        }
+      />
+
+      {/* ✅ This was missing */}
+      <Route
+        path="/profile/:id"
+        element={
+          <Layout
+            title="Profile - Apexium Consult & Services"
+            description="View the profile of a team member at Apexium Consult & Services."
+            keywords="Apexium team profile, legal consultants, business consultants, corporate lawyers, Nigeria"
+          >
+            <ProfilePreview />
+          </Layout>
+        }
+      />
+
       <Route
         path="/contact"
         element={

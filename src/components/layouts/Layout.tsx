@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({
       <Header />
 
       {/* Apply header padding only on non-home pages */}
-      <main className={`flex-grow ${isHome ? "" : "pt-10 md:pt-20"}`}>
+      <main className={`flex-grow ${isHome ? "" : "pt-10 md:pt-15"}`}>
         {children}
       </main>
 

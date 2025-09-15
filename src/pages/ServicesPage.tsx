@@ -9,8 +9,7 @@ import {
 } from "react-icons/fa";
 import { Plus, Minus } from "lucide-react";
 import { motion } from "framer-motion";
-
-// const NAVY = "#0B2A44";
+import { Link } from "react-router-dom";
 
 const fullServicesList = [
   {
@@ -154,13 +153,15 @@ const ServicesPage = () => {
                 className="flex justify-between items-center p-6 cursor-pointer"
                 onClick={() => toggleService(index)}
               >
-                <div className="flex items-center">
-                  <service.icon className="text-[#0B2A44] mr-3" size={32} />
+                <div className="flex items-start gap-3">
+                  <service.icon className="text-[#0B2A44]" size={36} />
                   <div>
-                    <h2 className="text-lg md:text-xl font-medium text-[#0B2A44]">
+                    <h2 className="text-lg md:text-xl font-semibold text-[#0B2A44]">
                       {service.title}
                     </h2>
-                    <p className="text-gray-600 text-sm">{service.short}</p>
+                    <p className="text-gray-600 text-sm md:text-base">
+                      {service.short}
+                    </p>
                   </div>
                 </div>
                 <button
@@ -179,15 +180,27 @@ const ServicesPage = () => {
               <div
                 className={`px-6 pb-6 transition-all duration-500 ease-in-out overflow-hidden ${
                   openIndex === index
-                    ? "max-h-96 opacity-100"
+                    ? "max-h-[500px] opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm md:text-base">
+                <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm md:text-base mb-6">
                   {service.details.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
+
+                {/* Contact Button */}
+                {openIndex === index && (
+                  <div className="text-center">
+                    <Link
+                      to="/contact"
+                      className="inline-block bg-[#0B2A44] text-white px-6 py-2 rounded-full text-sm md:text-base font-medium shadow hover:bg-[#0B2A44]/90 transition"
+                    >
+                      Contact Us About {service.title}
+                    </Link>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
