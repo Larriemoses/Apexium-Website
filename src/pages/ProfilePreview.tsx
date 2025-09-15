@@ -6,8 +6,29 @@ const teamProfiles: Record<string, any> = {
     role: "Managing Partner",
     email: "apexiumconsultservice@gmail.com",
     phone: "07032270131 / 08139618575",
-    practice: "Corporate & Commercial Law, Business Consulting",
-    bio: "As a Corporate & Commercial Lawyer and Business Consultant, Samuel combines legal expertise with business insight to deliver practical solutions that drive growth and ensure compliance.",
+    practice:
+      "Corporate & Commercial Transactions, Regulatory Compliance, Business Consulting, Dispute Resolution & Litigation Support",
+    bio: `As Managing Partner at Apexium Consult & Services Ltd, Samuel combines legal expertise with business insight to deliver practical solutions that drive growth and ensure compliance. He is a Corporate & Commercial Lawyer and Business Consultant with hands-on experience advising entrepreneurs, SMEs, and corporations across diverse sectors. He is passionate about empowering businesses with innovative legal and corporate services, bridging the gap between law and enterprise, and helping organizations operate with confidence in Nigeria’s dynamic business environment.`,
+    experience: [
+      "Lead the firm’s legal and business consulting practice with a client-centered approach.",
+      "Advise on corporate governance, compliance, and risk management strategies.",
+      "Draft, review, and negotiate commercial agreements and corporate documents.",
+      "Oversee company secretarial services and CAC-related transactions (incorporation, restructuring, filings).",
+      "Provide litigation and dispute resolution support tailored to business realities.",
+      "Deliver corporate training and advisory sessions on compliance, business structuring, and regulatory issues.",
+    ],
+    skills: [
+      "Corporate & Commercial Law",
+      "Business Advisory & Consulting",
+      "Litigation & Dispute Resolution",
+      "Regulatory Compliance & Risk Management",
+      "Contract Drafting & Negotiation",
+      "Company Secretarial Services",
+      "CAC Registration & Accreditation",
+      "Corporate Governance",
+      "Mergers & Acquisitions (M&A)",
+      "Business Structuring & Expansion",
+    ],
     image:
       "https://res.cloudinary.com/dvl2r3bdw/image/upload/v1757605451/WhatsApp_Image_2025-09-07_at_17.45.46_b95c3218_epnwe6.jpg",
   },
@@ -75,21 +96,56 @@ const ProfilePreview = () => {
                 {profile.phone}
               </a>
             </p>
-            <p className="text-gray-700">
-              <span className="font-semibold text-[#0B2A44]">
-                Practice Area:
-              </span>{" "}
-              {profile.practice}
-            </p>
+            {profile.practice && (
+              <p className="text-gray-700">
+                <span className="font-semibold text-[#0B2A44]">
+                  Practice Area:
+                </span>{" "}
+                {profile.practice}
+              </p>
+            )}
           </div>
 
+          {/* Bio */}
           <p className="text-gray-600 leading-relaxed mt-6 text-sm md:text-base">
             {profile.bio}
           </p>
 
+          {/* Experience Section */}
+          {profile.experience && (
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold text-[#0B2A44] mb-3">
+                Experience
+              </h3>
+              <ol className="list-decimal list-outside pl-6 space-y-2 text-gray-700 text-sm md:text-base">
+                {profile.experience.map((exp: string, i: number) => (
+                  <li key={i} className="leading-relaxed">
+                    {exp}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {/* Skills Section */}
+          {profile.skills && (
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold text-[#0B2A44] mb-3">
+                Skills & Expertise
+              </h3>
+              <ul className="list-disc list-outside pl-6 space-y-1 text-gray-700 text-sm md:text-base">
+                {profile.skills.map((skill: string, i: number) => (
+                  <li key={i} className="leading-relaxed">
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <Link
             to="/our-team"
-            className="mt-8 inline-block bg-[#0B2A44] text-white px-6 py-2 rounded-full hover:bg-[#0B2A44]/90 transition text-sm md:text-base"
+            className="mt-10 inline-block bg-[#0B2A44] text-white px-6 py-2 rounded-full hover:bg-[#0B2A44]/90 transition text-sm md:text-base"
           >
             ← Back to Our Team
           </Link>
