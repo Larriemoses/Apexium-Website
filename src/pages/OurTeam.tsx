@@ -38,7 +38,7 @@ const OurTeam = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        {teamMembers.map((member, index) => (
+        {teamMembers.map((member) => (
           <motion.div
             key={member.id}
             className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col items-center text-center p-6"
