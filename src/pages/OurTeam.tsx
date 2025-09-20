@@ -7,7 +7,7 @@ const teamMembers = [
     name: "Samuel Omotola Omomowo",
     role: "Managing Partner",
     email: "apexiumconsultservice@gmail.com",
-    phone: "07032270131 / 08139618575",
+    // phone: "07032270131 / 08139618575",
     practice: "Corporate & Commercial Law, Business Consulting",
     image:
       "https://res.cloudinary.com/dvl2r3bdw/image/upload/v1757605451/WhatsApp_Image_2025-09-07_at_17.45.46_b95c3218_epnwe6.jpg",
@@ -17,10 +17,21 @@ const teamMembers = [
     name: "Mercy Sayo Omomowo-Edewi",
     role: "Senior Partner",
     email: "apexiumconsultservice@gmail.com",
-    phone: "07032270131 / 08139618575",
+    // phone: "07032270131 / 08139618575",
     practice: "Litigation, Corporate & Commercial Transactions",
     image:
       "https://res.cloudinary.com/dvl2r3bdw/image/upload/v1757955186/partner_2_esvrpb.jpg",
+  },
+  {
+    id: "priye",
+    name: "Priye Ajama",
+    role: "Associate Counsel",
+    email: "apexiumconsultservice@gmail.com",
+    // phone: "07032270131 / 08139618575",
+    practice:
+      "General Litigation, Corporate Governance & Compliance, Property Law, Dispute Resolution",
+    image:
+      "http://res.cloudinary.com/dvl2r3bdw/image/upload/v1758407358/WhatsApp_Image_2025-09-20_at_09.29.04_ecc5d90e_or5wka.jpg",
   },
 ];
 
@@ -37,7 +48,7 @@ const OurTeam = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {teamMembers.map((member) => (
           <motion.div
             key={member.id}
@@ -60,10 +71,10 @@ const OurTeam = () => {
               <span className="font-semibold text-[#0B2A44]">Email:</span>{" "}
               {member.email}
             </p>
-            <p className="text-gray-600 text-sm">
+            {/* <p className="text-gray-600 text-sm">
               <span className="font-semibold text-[#0B2A44]">Tel.:</span>{" "}
               {member.phone}
-            </p>
+            </p> */}
             <p className="text-gray-600 text-sm mb-4">
               <span className="font-semibold text-[#0B2A44]">
                 Practice Area:

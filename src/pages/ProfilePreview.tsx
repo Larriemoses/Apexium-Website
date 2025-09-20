@@ -5,7 +5,7 @@ const teamProfiles: Record<string, any> = {
     name: "Samuel Omotola Omomowo",
     role: "Managing Partner",
     email: "apexiumconsultservice@gmail.com",
-    phone: "07032270131 / 08139618575",
+    // phone: "07032270131 / 08139618575",
     practice:
       "Corporate & Commercial Transactions, Regulatory Compliance, Business Consulting, Dispute Resolution & Litigation Support",
     bio: `As Managing Partner at Apexium Consult & Services Ltd, Samuel combines legal expertise with business insight to deliver practical solutions that drive growth and ensure compliance. He is a Corporate & Commercial Lawyer and Business Consultant with hands-on experience advising entrepreneurs, SMEs, and corporations across diverse sectors. He is passionate about empowering businesses with innovative legal and corporate services, bridging the gap between law and enterprise, and helping organizations operate with confidence in Nigeria’s dynamic business environment.`,
@@ -36,11 +36,41 @@ const teamProfiles: Record<string, any> = {
     name: "Mercy Sayo Omomowo-Edewi",
     role: "Senior Partner",
     email: "apexiumconsultservice@gmail.com",
-    phone: "07032270131 / 08139618575",
+    // phone: "07032270131 / 08139618575",
     practice: "Litigation, Corporate & Commercial Transactions",
     bio: "She specializes in litigation, corporate and commercial transactions, with extensive experience in drafting and reviewing agreements. She provides legal support to businesses and companies across various sectors.",
     image:
       "https://res.cloudinary.com/dvl2r3bdw/image/upload/v1757955186/partner_2_esvrpb.jpg",
+  },
+  priye: {
+    name: "Priye Ajama",
+    role: "Associate Counsel",
+    email: "apexiumconsultservice@gmail.com",
+    // phone: "07032270131 / 08139618575",
+    practice:
+      "General Litigation, Corporate Governance & Compliance, Property Law, Dispute Resolution",
+    bio: `Priye Ajama holds a Bachelor of Laws (LL.B) from Igbinedion University, Okada, and a Barrister-at-Law (B.L) from the Nigerian Law School, where she graduated with First Class Honours. Her practice areas span general litigation, corporate governance and compliance, property law, and dispute resolution.`,
+    experience: [
+      "Provided legal advisory services, drafted and reviewed contracts, and managed corporate secretarial functions.",
+      "Represented over 150 clients in litigation within her first year of practice.",
+      "Authored 100+ legal briefs in the past year, significantly contributing to client successes.",
+      "Contributed to major corporate commercial transactions, advancing business objectives while ensuring compliance.",
+      "Successfully registered 50+ businesses with the Corporate Affairs Commission (CAC).",
+    ],
+    skills: [
+      "General Litigation & Legal Advocacy",
+      "Corporate Governance & Compliance",
+      "Property & Real Estate Law",
+      "Regulatory Compliance & Risk Management",
+      "Contract Drafting & Review",
+      "Dispute Resolution & Mediation",
+      "Corporate Secretarial Services",
+      "Business Registration with CAC",
+      "Legal Brief Writing",
+      "Strategic Legal Advisory",
+    ],
+    image:
+      "http://res.cloudinary.com/dvl2r3bdw/image/upload/v1758407358/WhatsApp_Image_2025-09-20_at_09.29.04_ecc5d90e_or5wka.jpg",
   },
 };
 
@@ -65,17 +95,17 @@ const ProfilePreview = () => {
   return (
     <section className="min-h-screen bg-gray-50 py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        {/* Left: Full Image */}
-        <div className="flex justify-center">
+        {/* Left: Sticky Image */}
+        <div className="flex justify-center md:justify-start">
           <img
             src={profile.image}
             alt={profile.name}
-            className="w-full max-w-md h-auto object-cover rounded-lg"
+            className="w-full max-w-md h-auto object-cover rounded-lg md:sticky md:top-24"
           />
         </div>
 
-        {/* Right: Profile Details */}
-        <div className="flex flex-col justify-center">
+        {/* Right: Scrollable Content */}
+        <div className="flex flex-col justify-start md:max-h-[80vh] md:overflow-y-auto pr-2">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0B2A44] mb-2">
             {profile.name}
           </h2>
@@ -90,12 +120,12 @@ const ProfilePreview = () => {
                 {profile.email}
               </a>
             </p>
-            <p className="text-gray-700">
+            {/* <p className="text-gray-700">
               <span className="font-semibold text-[#0B2A44]">Tel.:</span>{" "}
               <a href={`tel:${profile.phone}`} className="hover:underline">
                 {profile.phone}
               </a>
-            </p>
+            </p> */}
             {profile.practice && (
               <p className="text-gray-700">
                 <span className="font-semibold text-[#0B2A44]">
