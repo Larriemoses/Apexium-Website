@@ -1,11 +1,14 @@
 # robots.txt for https://apexiumconsults.com/
 
 User-agent: *
-Allow: /
+Allow:
 
+# Sitemap link
+Sitemap: https://apexiumconsults.com/sitemap.xml
+
+ 
 # Disallow sensitive folders (if any exist)
 Disallow: /api/
 Disallow: /admin/
 
-# Sitemap link
-Sitemap: https://apexiumconsults.com/sitemap.xml
+
