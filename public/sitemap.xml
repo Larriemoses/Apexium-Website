@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://apexiumconsults.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://apexiumconsults.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Our Team -->
+  <url>
+    <loc>https://apexiumconsults.com/our-team</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Profiles -->
+  <url>
+    <loc>https://apexiumconsults.com/profile/samuel</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexiumconsults.com/profile/mercy</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexiumconsults.com/profile/priye</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://apexiumconsults.com/contact</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
